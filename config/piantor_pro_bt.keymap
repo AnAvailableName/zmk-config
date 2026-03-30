@@ -31,7 +31,7 @@
 // TODO: update tables in comments for visualizing layout
 / {
     behaviors {
-        td_AltGr_MOUSE: tab_dance_AltGr_mod_MOUSE {
+      td_AltGr_MOUSE: tab_dance_AltGr_mod_MOUSE {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -100,10 +100,14 @@
         extra_layer_2 {
             display-name = "MOUSE";
             bindings = <
-                &trans &trans &trans    &trans        &trans         &kp n           &trans          &trans          &trans        &trans          &trans  &trans
-                &trans &trans &mkp MB4  &msc SCRL_UP  &msc SCRL_DOWN &mkp MP5        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans  &trans
-                &trans &trans &trans    &trans        &trans         &trans          &trans          &trans          &trans        &trans          &trans  &trans
-                            &mkp MCLK   &mkp LCLK     &mkp RCLK      &trans          &trans          &trans       
+                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+                                     &trans &trans &trans  &trans &trans &trans       
+                /* &trans &trans &trans    &trans        &trans         &kp n           &trans          &trans          &trans        &trans          &trans  &trans */
+                /* &trans &trans &mkp MB4  &msc SCRL_UP  &msc SCRL_DOWN &mkp MP5        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans  &trans */
+                /* &trans &trans &trans    &trans        &trans         &trans          &trans          &trans          &trans        &trans          &trans  &trans */
+                /*             &mkp MCLK   &mkp LCLK     &mkp RCLK      &trans          &trans          &trans        */
             >;
         };
 
