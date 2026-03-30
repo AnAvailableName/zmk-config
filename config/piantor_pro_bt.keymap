@@ -100,7 +100,7 @@
         extra_layer_2 {
             display-name = "MOUSE";
             bindings = <
-                &trans &trans &trans &trans &trans &kp n   &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &kp N   &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
                                      &trans &trans &trans  &trans &trans &trans       
