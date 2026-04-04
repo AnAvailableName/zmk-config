@@ -30,7 +30,7 @@
 // TODO: update tables in comments for visualizing layout
 / {
     behaviors {
-      td_alt_mouse: tab_dance_altgr_mod_mouse {
+      td_alt_mouse: tab_dance_alt_mouse {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
