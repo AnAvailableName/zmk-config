@@ -31,16 +31,6 @@
     };
 };
 
-/ {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <SYMBOL NUMBER>;
-            then-layer = <NUMBER>;
-        };
-    };
-};
-
 // TODO: update tables in comments for visualizing layout
 / {
     behaviors {
@@ -62,6 +52,14 @@
             tapping-term-ms = <200>;
             bindings = <&kp LSHIFT>, <&caps_word>;
       };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <SYMBOL NUMBER>;
+            then-layer = <NUMBER>;
+        };
     };
 
     keymap {
