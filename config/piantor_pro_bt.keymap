@@ -17,10 +17,6 @@
 #define META    3
 #define MOUSE   4
 
-// renamed keys/buttions
-#define SCRL_LEFT   MB4
-#define SCRL_RIGHT  MB5
-
 // mouse settings
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 900  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15   // default: 10
