@@ -121,8 +121,8 @@
         extra_layer_3 {
             display-name = "F KEYS";
             bindings = <
-                &kb F1 &kb F2 &kb F3 &kb F4 &kb F5 &kb F6  &kb F7 &kb F8 &kb F9 &kb F10 &kb F11 &kb F12
-                &kb F1 &kb F2 &kb F3 &kb F4 &kb F5 &kb F6  &kb F7 &kb F8 &kb F9 &kb F10 &kb F11 &kb F12
+                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6  &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6  &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
                 &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
                                      &trans &trans &trans  &trans &trans &trans       
             >;
