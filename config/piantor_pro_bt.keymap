@@ -55,11 +55,11 @@
 
         default_layer {
             display-name = "QWERTZ";
-            // ----------------------------------------------------------------------------------------------------
-            // |  TAB           |  Q  |  W  |  E  |  R  |  T                 |  Y  |  U   |  I  |  O  |  P  | }   |
-            // | CTRL/ESC       |  A  |  S  |  D  |  F  |  G                 |  H  |  J   |  K  |  L  |  ;  |  '  |
-            // | SHFT/caps word |  Z  |  X  |  C  |  V  |  B                 |  N  |  M   |  ,  |  .  |  /  | ESC |
-            // | AltGr/Slash    | Super/Backspace | SPC                      | SYMBOL/ENTER | ALT  | AltGr/Slash  |
+            // -----------------------------------------------------------------------------------------------------
+            // |  TAB           |  Q     |  W  |  E  |  R  |  T              |  Z  |  U   |  I  |  O  |  P   |  Ü  |
+            // | CTRL/ESC       | SHFT/A |  S  |  D  |  F  |  G              |  H  |  J   |  K  |  L  |SHFT/Ö|Ä/ctr|
+            // | SHFT/caps word |   Y    |  X  |  C  |  V  |  B              |  N  |  M   |  ,  |  .  |  -   | ESC |
+            // | AltGr/Slash    | Super/Slash | SPC                        | SYMBOL/ENTER | ALT | AltGr/Backslash  |
             bindings = <
                 &lt META TAB        &kp Q &kp W &kp E &kp R &kp T            &kp Y          &kp U  &kp I     &kp O   &kp P    &lt META LBKT
                 &mt LCTRL ESC       &mt LSHFT A &kp S &kp D &kp F &kp G            &kp H          &kp J  &kp K     &kp L   &mt LSHFT SEMI &mt LCTRL SQT
@@ -119,10 +119,10 @@
         };
 
         extra_layer_3 {
-            display-name = "EXTRA 3";
+            display-name = "F KEYS";
             bindings = <
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+                &kb F1 &kb F2 &kb F3 &kb F4 &kb F5 &kb F6  &kb F7 &kb F8 &kb F9 &kb F10 &kb F11 &kb F12
+                &kb F1 &kb F2 &kb F3 &kb F4 &kb F5 &kb F6  &kb F7 &kb F8 &kb F9 &kb F10 &kb F11 &kb F12
                 &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
                                      &trans &trans &trans  &trans &trans &trans       
             >;
