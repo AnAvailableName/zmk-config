@@ -94,7 +94,7 @@
                 &kp GRAVE     &kp EXCL           &kp AT       &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR          &kp LS(MINUS)
                 &mt LCTRL ESC &mt LSHFT RA(NUBS) &trans       &trans   &trans   &trans           &kp MINUS &kp EQUAL &kp RBKT  &kp BSLH &mt LSHIFT RA(N7) &kp RA(N0)
                 &kp LSHFT     &kp NUBS           &kp LS(NUBS) &trans   &trans   &trans           &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp RA(N8)        &kp RA(N9)
-                                                         &none     &none     &none               &mo NUMBER   &kp LALT   &kp RALT                            
+                                                         &none     &none     &none               &kp RALT   &kp LALT   &kp RALT                            
             >;
         };
 
