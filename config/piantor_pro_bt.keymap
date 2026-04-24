@@ -64,7 +64,7 @@
               &lt META TAB        &kp Q       &kp W       &kp E &kp R &kp T     &kp Y          &kp U  &kp I     &kp O       &kp P          &lt META LBKT
               &mt LCTRL ESC       &mt LSHFT A &mt LCTRL S &kp D &kp F &kp G     &kp H          &kp J  &kp K     &mt LCTRL L &mt LSHFT SEMI &mt LCTRL SQT
               &td_shift_caps_word &kp Z       &kp X       &kp C &kp V &kp B     &kp N          &kp M  &kp COMMA &kp DOT     &kp FSLH       &td_shift_caps_word
-              &mt RALT KP_SLASH   &mt LMETA BACKSPACE &lt NUMBER SPACE          &lt SYMBOL RET &td_alt_mouse &mt RALT RA(MINUS)
+              &mt RALT KP_SLASH   &mt LMETA BACKSPACE &lt SYMBOL SPACE          &lt NUMBER RET &td_alt_mouse &mt RALT RA(MINUS)
             >;
         };
 
@@ -78,8 +78,8 @@
             bindings = <
                 &kp TAB       &kp N1         &kp N2  &kp N3        &kp N4        &kp N5          &kp N6   &kp N7   &kp N8 &kp N9    &kp N0    &kp BSPC
                 &kp LCTRL     &mt LSHFT HOME &kp END &kp PAGE_UP   &kp PAGE_DOWN &kp BACKSPACE   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp LSHFT &kp LCTRL
-                &kp LSHFT     &trans         &trans  &trans        &trans        &trans          &trans   &trans   &trans &trans    &trans    &kp LSHFT
-                                                &none         &none       &none           &kp LGUI &kp LALT &kp RALT
+                &kp LSHFT     &trans         &trans  &trans        &caps_word    &trans          &trans   &trans   &trans &trans    &trans    &kp LSHFT
+                                              &kp RALT &kp LALT &kp LGUI                         &none         &none       &none        
             >;
         };
 
@@ -94,7 +94,7 @@
                 &kp GRAVE     &kp EXCL           &kp AT       &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR          &kp LS(MINUS)
                 &mt LCTRL ESC &mt LSHFT RA(NUBS) &trans       &trans   &trans   &trans           &kp MINUS &kp EQUAL &kp RBKT  &kp BSLH &mt LSHIFT RA(N7) &kp RA(N0)
                 &kp LSHFT     &kp NUBS           &kp LS(NUBS) &trans   &trans   &trans           &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp RA(N8)        &kp RA(N9)
-                                                 &kp RALT     &kp LALT &mo NUMBER                &none     &none     &none           
+                                                         &none     &none     &none               &mo NUMBER   &kp LALT   &kp RALT                            
             >;
         };
 
