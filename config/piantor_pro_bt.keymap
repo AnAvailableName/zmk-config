@@ -55,16 +55,16 @@
 
         default_layer {
             display-name = "QWERTZ";
-            // -----------------------------------------------------------------------------------------------------
-            // |  TAB           |  Q     |  W  |  E  |  R  |  T              |  Z  |  U   |  I  |  O  |  P   |  Ü  |
-            // | CTRL/ESC       | SHFT/A |  S  |  D  |  F  |  G              |  H  |  J   |  K  |  L  |SHFT/Ö|Ä/ctr|
-            // | SHFT/caps word |   Y    |  X  |  C  |  V  |  B              |  N  |  M   |  ,  |  .  |  -   | ESC |
+            // ---------------------------------------------------------------------------------------------------------
+            // |  TAB           |  Q     |  W  |  E  |  R  |  T              |  Z  |  U   |  I  |  O      |  P   |  Ü  |
+            // | CTRL/ESC       | SHFT/A |  CTRL/S  |  D  |  F  |  G         |  H  |  J   |  K  |  CTRL/L |SHFT/Ö|Ä/ctr|
+            // | SHFT/caps word |   Y    |  X  |  C  |  V  |  B              |  N  |  M   |  ,  |  .      |  -   | ESC |
             // | AltGr/Slash    | Super/Slash | SPC                        | SYMBOL/ENTER | ALT | AltGr/Backslash  |
             bindings = <
-                &lt META TAB        &kp Q &kp W &kp E &kp R &kp T            &kp Y          &kp U  &kp I     &kp O   &kp P    &lt META LBKT
-                &mt LCTRL ESC       &mt LSHFT A &kp S &kp D &kp F &kp G            &kp H          &kp J  &kp K     &kp L   &mt LSHFT SEMI &mt LCTRL SQT
-                &td_shift_caps_word &kp Z &kp X &kp C &kp V &kp B            &kp N          &kp M  &kp COMMA &kp DOT &kp FSLH &td_shift_caps_word
-                &mt RALT KP_SLASH   &mt LMETA BACKSPACE &lt NUMBER SPACE     &lt SYMBOL RET &td_alt_mouse &mt RALT RA(MINUS)
+              &lt META TAB        &kp Q       &kp W       &kp E &kp R &kp T     &kp Y          &kp U  &kp I     &kp O       &kp P          &lt META LBKT
+              &mt LCTRL ESC       &mt LSHFT A &mt LCTRL S &kp D &kp F &kp G     &kp H          &kp J  &kp K     &mt LCTRL L &mt LSHFT SEMI &mt LCTRL SQT
+              &td_shift_caps_word &kp Z       &kp X       &kp C &kp V &kp B     &kp N          &kp M  &kp COMMA &kp DOT     &kp FSLH       &td_shift_caps_word
+              &mt RALT KP_SLASH   &mt LMETA BACKSPACE &lt NUMBER SPACE          &lt SYMBOL RET &td_alt_mouse &mt RALT RA(MINUS)
             >;
         };
 
