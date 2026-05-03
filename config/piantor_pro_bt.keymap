@@ -30,11 +30,11 @@
 // TODO: update tables in comments for visualizing layout
 / {
     behaviors {
-      td_alt_mouse: tab_dance_alt_mouse {
+      td_alt_backspace_mouse: tab_dance_alt_mouse {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LALT>, <&mo MOUSE>;
+            bindings = <&mt LALT BACKSPACE>, <&mo MOUSE>;
       };
       td_ctrl_meta: tab_dance_ctrl_meta {
             compatible = "zmk,behavior-tap-dance";
@@ -64,7 +64,7 @@
               &lt META TAB        &kp Q       &kp W       &kp E &kp R &kp T     &kp Y          &kp U  &kp I     &kp O       &kp P          &lt META LBKT
               &mt LCTRL ESC       &mt LSHFT A &mt LCTRL S &kp D &kp F &kp G     &kp H          &kp J  &kp K     &mt LCTRL L &mt LSHFT SEMI &mt LCTRL SQT
               &td_shift_caps_word &kp Z       &kp X       &kp C &kp V &kp B     &kp N          &kp M  &kp COMMA &kp DOT     &kp FSLH       &td_shift_caps_word
-              &mt RALT LS(N7)   &mt LMETA BACKSPACE &lt SYMBOL SPACE          &lt NUMBER RET &td_alt_mouse &mt RALT RA(MINUS)
+              &mt RALT LS(N7)   &mt LMETA TAP &lt SYMBOL SPACE          &lt NUMBER RET &td_alt_backspace_mouse &mt RALT RA(MINUS)
             >;
         };
 
