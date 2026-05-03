@@ -29,18 +29,29 @@
 
 // TODO: update tables in comments for visualizing layout
 / {
+    macros {
+        back_two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap &kp BACKSPACE 
+                &macro_tap &kp BACKSPACE 
+            >;
+        };
+    };
+
     behaviors {
       td_alt_backspace_mouse: tab_dance_alt_mouse {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings = <&mt LALT BACKSPACE>, <&mo MOUSE>;
       };
       td_ctrl_meta: tab_dance_ctrl_meta {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LCTRL>, <&mo META>;
+            bindings = <&kp LCTRL>, <&lt META &back_two>;
       };
       td_shift_caps_word: tab_dance_shift_caps_word {
             compatible = "zmk,behavior-tap-dance";
