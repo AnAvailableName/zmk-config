@@ -44,7 +44,7 @@
       td_alt_backspace_mouse: tab_dance_alt_mouse {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <120>;
             bindings = <&mt LALT BACKSPACE>, <&mo MOUSE>;
       };
       td_ctrl_meta: tab_dance_ctrl_meta {
