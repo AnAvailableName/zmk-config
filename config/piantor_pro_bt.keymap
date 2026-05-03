@@ -30,7 +30,7 @@
 // TODO: update tables in comments for visualizing layout
 / {
     macros {
-        back_two {
+        back_two: back_tow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
