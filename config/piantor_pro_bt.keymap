@@ -29,6 +29,11 @@
 
 // TODO: update tables in comments for visualizing layout
 / {
+    prog_caps: programming_caps_word {
+        compatible = "zmk,behavior-caps-word";
+        #binding-cells = <0>;
+        continue-list = <UNDERSCORE>;
+    };
     macros {
         back_two: back_tow {
             compatible = "zmk,behavior-macro";
@@ -57,7 +62,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LSHIFT>, <&caps_word>;
+            bindings = <&kp LSHIFT>, <&prog_caps>;
       };
     };
 
@@ -89,7 +94,7 @@
             bindings = <
                 &kp TAB       &kp N1         &kp N2  &kp N3        &kp N4        &kp N5          &kp N6   &kp N7   &kp N8 &kp N9    &kp N0    &kp BSPC
                 &kp LCTRL     &mt LSHFT HOME &mt LCTRL END &kp PAGE_UP   &kp PAGE_DOWN &kp BACKSPACE   &kp LEFT &kp DOWN &kp UP &mt LCTRL RIGHT &kp LSHFT &kp LCTRL
-                &kp LSHFT     &caps_word     &trans  &trans        &kp DELETE    &kp PSCRN       &trans   &trans   &trans &trans    &trans    &kp LSHFT
+                &kp LSHFT     &prog_caps     &trans  &trans        &kp DELETE    &kp PSCRN       &trans   &trans   &trans &trans    &trans    &kp LSHFT
                                               &kp RALT &kp LALT &kp LGUI                         &none         &none       &none        
             >;
         };
