@@ -47,7 +47,7 @@
     };
 
     behaviors {
-      td_alt_backspace_F tab_dance_alt_mouse {
+      td_alt_backspace_F: tab_dance_alt_mouse {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <120>;
