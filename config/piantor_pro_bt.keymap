@@ -16,6 +16,7 @@
 #define SYMBOL  2
 #define META    3
 #define MOUSE   4
+#define F_KEYS  5
 
 // mouse settings
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 900  // default: 600
@@ -46,17 +47,17 @@
     };
 
     behaviors {
-      td_alt_backspace_mouse: tab_dance_alt_mouse {
+      td_alt_backspace_F tab_dance_alt_mouse {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <120>;
-            bindings = <&mt LALT BACKSPACE>, <&mo MOUSE>;
+            bindings = <&mt LALT BACKSPACE>, <&lt F_KEYS back_two>;
       };
       td_ctrl_meta: tab_dance_ctrl_meta {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LCTRL>, <&lt META &back_two>;
+            bindings = <&kp LCTRL>, <&mo META>;
       };
       td_shift_caps_word: tab_dance_shift_caps_word {
             compatible = "zmk,behavior-tap-dance";
@@ -72,15 +73,15 @@
         default_layer {
             display-name = "QWERTZ";
             // ---------------------------------------------------------------------------------------------------------
-            // |  TAB           |  Q     |  W  |  E  |  R  |  T              |  Z  |  U   |  I  |  O      |  P   |  Ü  |
-            // | CTRL/ESC       | SHFT/A |  CTRL/S  |  D  |  F  |  G         |  H  |  J   |  K  |  CTRL/L |SHFT/Ö|Ä/ctr|
-            // | SHFT/caps word |   Y    |  X  |  C  |  V  |  B              |  N  |  M   |  ,  |  .      |  -   | ESC |
-            // | AltGr/Slash    | Super/Slash | SPC                        | SYMBOL/ENTER | ALT | AltGr/Backslash  |
+            // |  TAB           |  Q         |  W         |  E        |  R  |  T      |  Z          |  U   |  I       |  O      |  P            |  Ü  |
+            // | CTRL/ESC       | SHFT/A     |CTRL/S      |  D        |  F  |  G      |  H          |  J   |  K       |  CTRL/L |SHFT/Ö         |Ä/ctr|
+            // | SHFT/caps word |   Y        |  X         |  C        |  V  |  B      |  N          |  M   |  ,       |  .      |  -            | ESC |
+            // | AltGr/Slash    |Super/Slash | SPC                                    | SYMBOL/ENTER | ALT | AltGr/Backslash  |
             bindings = <
-              &lt META TAB        &kp Q       &kp W       &kp E &kp R &kp T     &kp Y          &kp U  &kp I     &kp O       &kp P          &lt META LBKT
-              &mt LCTRL ESC       &mt LSHFT A &mt LCTRL S &kp D &kp F &kp G     &kp H          &kp J  &kp K     &mt LCTRL L &mt LSHFT SEMI &mt LCTRL SQT
-              &td_shift_caps_word &kp Z       &kp X       &kp C &kp V &kp B     &kp N          &kp M  &kp COMMA &kp DOT     &kp FSLH       &td_shift_caps_word
-              &mt RALT LS(N7)   &mt LMETA TAB &lt SYMBOL SPACE          &lt NUMBER RET &td_alt_backspace_mouse &mt RALT RA(MINUS)
+              &lt META TAB        &kp Q       &kp W       &kp E       &kp R &kp T     &kp Y          &kp U  &kp I     &kp O       &kp P          &lt META LBKT
+              &mt LCTRL ESC       &mt LSHFT A &mt LCTRL S &lt MOUSE D &kp F &kp G     &kp H          &kp J  &kp K     &mt LCTRL L &mt LSHFT SEMI &mt LCTRL SQT
+              &td_shift_caps_word &kp Z       &kp X       &kp C       &kp V &kp B     &kp N          &kp M  &kp COMMA &kp DOT     &kp FSLH       &td_shift_caps_word
+              &mt RALT LS(N7)   &mt LMETA TAB &lt SYMBOL SPACE                        &lt NUMBER RET &td_alt_backspace_F &mt RALT RA(MINUS)
             >;
         };
 
@@ -127,20 +128,20 @@
         mouse_layer {
             display-name = "MOUSE";
             bindings = <
-                &trans        &trans &trans   &trans       &trans             &trans       &mkp MB4       &msc SCRL_DOWN &msc SCRL_UP   &mkp MB5        &trans  &trans
-                &td_ctrl_meta &trans &mkp MB4 &msc SCRL_UP &msc SCRL_DOWN     &mkp MB5     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT &trans  &td_ctrl_meta
-                &kp LSHIFT    &trans &trans   &trans       &trans             &trans       &mkp MCLK      &mkp LCLK      &mkp RCLK      &trans         &trans  &kp LSHIFT
-                              &mkp MCLK       &mkp LCLK    &mkp RCLK                       &trans         &trans         &trans       
+                &none         &none      &none     &none   &none &none     &mkp MB4       &msc SCRL_DOWN &msc SCRL_UP   &mkp MB5        &none  &none
+                &td_ctrl_meta &kp LSHIFT &kp LCTRL &none   &none &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT &none  &td_ctrl_meta
+                &kp LSHIFT    &none      &none     &none   &none &none     &mkp MCLK      &mkp LCLK      &mkp RCLK      &none         &none  &kp LSHIFT
+                              &mkp MCLK  &mkp LCLK &mkp RCLK                 &kp LMETA    &kp LALT         &none       
             >;
         };
 
         extra_layer_3 {
             display-name = "F KEYS";
             bindings = <
-                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6  &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6  &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                                     &trans &trans &trans  &trans &trans &trans       
+                &kp F1 &kp F2        &kp F3       &kp F4 &kp F5    &kp F6  &kp F7 &kp F8 &kp F9 &kp F10       &kp F11        &kp F12
+                &kp F1 &mt LSHIFT F2 &mt LCTRL F3 &kp F4 &kp F5    &kp F6  &kp F7 &kp F8 &kp F9 &mt LCTRL F10 &mt LSHIFT F11 &kp F12
+                &trans &trans        &trans       &trans &trans    &trans  &trans &trans &trans &trans        &trans         &trans
+                                     &trans &kp LMETA &trans       &trans &kp LALT &trans       
             >;
         };
 
