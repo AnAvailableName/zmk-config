@@ -36,7 +36,7 @@
         continue-list = <UNDERSCORE>;
     };
     macros {
-        back_two: back_tow {
+        back_two: back_two {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
@@ -51,7 +51,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <120>;
-            bindings = <&mt LALT BACKSPACE>, <&lt F_KEYS back_two>;
+            bindings = <&mt LALT BACKSPACE>, <&lt F_KEYS &back_two>;
       };
       td_ctrl_meta: tab_dance_ctrl_meta {
             compatible = "zmk,behavior-tap-dance";
