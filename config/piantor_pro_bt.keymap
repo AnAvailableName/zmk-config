@@ -79,9 +79,9 @@
             // | AltGr/Slash    |Super/Slash | SPC                                    | SYMBOL/ENTER | ALT | AltGr/Backslash  |
             bindings = <
               &lt META TAB        &kp Q       &kp W       &kp E       &kp R &kp T     &kp Y          &kp U  &kp I     &kp O       &kp P          &lt META LBKT
-              &mt LCTRL ESC       &mt LSHFT A &mt LCTRL S &lt MOUSE D &kp F &kp G     &kp H          &kp J  &kp K     &mt LCTRL L &mt LSHFT SEMI &mt LCTRL SQT
+              &lt F_KEYS ESC      &mt LSHFT A &mt LCTRL S &lt MOUSE D &kp F &kp G     &kp H          &kp J  &kp K     &mt LCTRL L &mt LSHFT SEMI &lt F_KEYS SQT
               &td_shift_caps_word &kp Z       &kp X       &kp C       &kp V &kp B     &kp N          &kp M  &kp COMMA &kp DOT     &kp FSLH       &td_shift_caps_word
-              &mt RALT LS(N7)   &mt LMETA TAB &lt SYMBOL SPACE                        &lt NUMBER RET &td_alt_backspace_F &mt RALT RA(MINUS)
+              &mt RALT LS(N7)   &mt LMETA TAB &lt SYMBOL SPACE                        &lt NUMBER RET &mt LALT BACKSPACE &mt RALT RA(MINUS)
             >;
         };
 
