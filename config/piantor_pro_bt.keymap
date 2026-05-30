@@ -17,6 +17,7 @@
 #define META    3
 #define MOUSE   4
 #define F_KEYS  5
+#define NUMBER  6
 
 // mouse settings
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 900  // default: 600
@@ -73,15 +74,15 @@
         default_layer {
             display-name = "QWERTZ";
             // ---------------------------------------------------------------------------------------------------------
-            // |  TAB           |  Q         |  W         |  E        |  R  |  T      |  Z          |  U   |  I       |  O      |  P            |  Ü  |
-            // | CTRL/ESC       | SHFT/A     |CTRL/S      |  D        |  F  |  G      |  H          |  J   |  K       |  CTRL/L |SHFT/Ö         |Ä/ctr|
-            // | SHFT/caps word |   Y        |  X         |  C        |  V  |  B      |  N          |  M   |  ,       |  .      |  -            | ESC |
-            // | AltGr/Slash    |Super/Slash | SPC                                    | SYMBOL/ENTER | ALT | AltGr/Backslash  |
+            // |  TAB           |  Q         |  W         |  E        |  R  |  T                |  Z          |  U   |  I       |  O      |  P            |  Ü  |
+            // | CTRL/ESC       | SHFT/A     |CTRL/S      |  D        |  F  |  G                |  H          |  J   |  K       |  CTRL/L |SHFT/Ö         |Ä/ctr|
+            // | SHFT/caps word |   Y        |  X         |  C        |  V  |  B                |  N          |  M   |  ,       |  .      |  -            | ESC |
+            // | AltGr/Slash    |Super/Slash | SPC                                              | SYMBOL/ENTER | ALT | AltGr/Backslash  |
             bindings = <
-              &lt META TAB        &kp Q       &kp W       &kp E       &kp R &kp T     &kp Y          &kp U  &kp I     &kp O       &kp P          &lt META LBKT
-              &lt F_KEYS ESC      &mt LSHFT A &mt LCTRL S &lt MOUSE D &kp F &kp G     &kp H          &kp J  &kp K     &mt LCTRL L &mt LSHFT SEMI &lt F_KEYS SQT
-              &td_shift_caps_word &kp Z       &kp X       &kp C       &kp V &kp B     &kp N          &kp M  &kp COMMA &kp DOT     &kp FSLH       &td_shift_caps_word
-              &mt RALT LS(N7)   &mt LMETA TAB &lt SYMBOL SPACE                        &lt NAV RET &mt LALT BACKSPACE &mt RALT RA(MINUS)
+              &lt META TAB        &kp Q       &kp W       &kp E       &kp R     &kp T &kp Y      &kp U  &kp I     &kp O       &kp P          &lt META LBKT
+              &lt F_KEYS ESC      &mt LSHFT A &mt LCTRL S &lt MOUSE D &lt NAV F &kp G &kp H      &kp J  &kp K     &mt LCTRL L &mt LSHFT SEMI &lt F_KEYS SQT
+              &td_shift_caps_word &kp Z       &kp X       &kp C       &kp V     &kp B &kp N      &kp M  &kp COMMA &kp DOT     &kp FSLH       &td_shift_caps_word
+                                          &mt RALT LS(N7)   &mt LMETA TAB &lt SYMBOL SPACE       &lt NAV RET &mt LALT BACKSPACE &mt RALT RA(MINUS)
             >;
         };
 
@@ -145,13 +146,18 @@
             >;
         };
 
+        //  +---------+-----+-----+-----+-----+-------+-------------+------+------+------+---------+-----+
+        //  |         |     |     |     |     |       |   /         |  7         |   8  |  9   |    (     |  )  | 
+        //  |         |     |     |     |     |       |   *         |  4         |   5  |  6   |    +     |  ^  |
+        //  |         |     |     |     |     |       |   0         |  1         |   2  |  3   |    -     |  :  |
+        //  |ALTGR/SLASH|SUPER/SLASH|SPC              | LSHFT/ENTER |  LALT/DOT  |COMMA |
         extra_layer_4 {
-            display-name = "EXTRA 4";
+            display-name = "NUMBER";
             bindings = <
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                                     &trans &trans &trans  &trans &trans &trans       
+                &none &none &none &none &none &none   &kp LS(N7)    &kp N7       &kp N8 &kp N9 &kp LS(N8) &kp LS(N9) 
+                &none &none &none &none &none &none   &kp LS(RBKT)  &kp N4       &kp N5 &kp N6 &kp EQUAL  &kp GRAVE 
+                &none &none &none &none &none &none   &kp N0        &kp N1       &kp N2 &kp N3 &kp FSLH   &kp LS(DOT)
+                              &trans &trans &kp SPC   &mt LSHFT RET &mt LALT DOT &kp COMMA
             >;
         };
 
