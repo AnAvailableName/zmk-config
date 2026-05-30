@@ -96,7 +96,7 @@
             bindings = <
                 &kp TAB   &kp N1         &kp N2        &kp N3        &kp N4        &kp N5           &kp N6   &kp N7   &kp N8 &kp N9          &kp N0    &kp BSPC
                 &kp LCTRL &mt LSHFT HOME &mt LCTRL END &kp PAGE_UP   &kp PAGE_DOWN &kp BACKSPACE    &kp LEFT &kp DOWN &kp UP &mt LCTRL RIGHT &kp LSHFT &kp LCTRL
-                &kp LSHFT &prog_caps     &trans        &trans        &kp DELETE    &kp PSCRN        &trans   &trans   &trans &trans          &trans    &kp LSHFT
+                &kp LSHFT &prog_caps     &none         &none         &kp DELETE    &kp PSCRN        &none    &none    &none  &none           &none     &kp LSHFT
                                                        &kp RALT      &kp LGUI      &kp LALT         &none    &none    &none        
             >;
         };
@@ -110,8 +110,8 @@
             //                             | AltGR      |  Alt   | NAV                  |         |         |         |
             bindings = <
                 &kp GRAVE &kp EXCL           &kp AT       &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS  &kp ASTRK &kp LPAR       &kp RPAR          &kp LS(MINUS)
-                &kp LCTRL &mt LSHFT RA(NUBS) &kp LCTRL    &trans   &trans   &trans           &kp MINUS &kp EQUAL &kp RBKT  &mt LCTRL BSLH &mt LSHIFT RA(N7) &kp RA(N0)
-                &kp LSHFT &kp NUBS           &kp LS(NUBS) &trans   &trans   &trans           &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC       &kp RA(N8)        &kp RA(N9)
+                &kp LCTRL &mt LSHFT RA(NUBS) &kp LCTRL    &none    &none    &none            &kp MINUS &kp EQUAL &kp RBKT  &mt LCTRL BSLH &mt LSHIFT RA(N7) &kp RA(N0)
+                &kp LSHFT &kp NUBS           &kp LS(NUBS) &none    &none    &none            &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC       &kp RA(N8)        &kp RA(N9)
                                                           &none    &none    &none            &kp LGUI  &kp LALT  &kp RALT                            
             >;
         };
@@ -164,20 +164,20 @@
         extra_layer_5 {
             display-name = "EXTRA 5";
             bindings = <
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                                     &trans &trans &trans  &trans &trans &trans       
+                &none &none &none &none &none &none  &none &none &none &none &none &none
+                &none &none &none &none &none &none  &none &none &none &none &none &none
+                &none &none &none &none &none &none  &none &none &none &none &none &none
+                                     &none &none &none  &none &none &none       
             >;
         };
 
         extra_layer_6 {
             display-name = "EXTRA 6";
             bindings = <
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                                     &trans &trans &trans  &trans &trans &trans       
+                &none &none &none &none &none &none  &none &none &none &none &none &none
+                &none &none &none &none &none &none  &none &none &none &none &none &none
+                &none &none &none &none &none &none  &none &none &none &none &none &none
+                                     &none &none &none  &none &none &none       
             >;
         };
     };
