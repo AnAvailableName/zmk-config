@@ -94,9 +94,9 @@
             // | SHFT |prog_caps|        |       | DELETE | PRINT |    |     |SRCL↓|SRCL↑|     |     | SHIFT|
             //                           | RALT  | LMETA  | LALT  |    |     |     |     |
             bindings = <
-                &kp TAB   &kp N1         &kp N2        &kp N3      &kp N4        &kp N5      &kp N6   &kp N7         &kp N8       &kp N9          &kp N0    &kp BSPC
-                &kp LCTRL &mt LSHFT HOME &mt LCTRL END &kp PAGE_UP &kp PAGE_DOWN &kp BSPC    &kp LEFT &kp DOWN       &kp UP       &mt LCTRL RIGHT &kp LSHFT &kp LCTRL
-                &kp LSHFT &prog_caps     &none         &none       &kp DELETE    &kp PSCRN   &none    &msc SCRL_DOWN &msc SCRL_UP &none           &none     &kp LSHFT
+                &kp TAB   &kp N1         &kp N2        &kp N3      &kp N4        &kp N5      &kp N6   &kp N7         &kp N8       &kp N9          &kp N0       &kp BSPC
+                &kp LCTRL &mt LSHFT HOME &mt LCTRL END &kp PAGE_UP &kp PAGE_DOWN &kp BSPC    &kp LEFT &kp DOWN       &kp UP       &mt LCTRL RIGHT &kp LSHFT    &kp LCTRL
+                &kp LSHFT &prog_caps     &none         &none       &kp DELETE    &kp PSCRN   &none    &msc SCRL_DOWN &msc SCRL_UP &kp LC(RBKT)    &kp LC(FSLH) &kp LSHFT
                                                        &kp RALT    &kp LMETA     &kp LALT    &none    &none    &none        
             >;
         };
