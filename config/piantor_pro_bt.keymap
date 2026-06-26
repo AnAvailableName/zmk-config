@@ -159,18 +159,18 @@
             >;
         };
 
-        //  +---------+-----+-----+-----+-----+-------+-------------+------+------+------+---------+-----+
-        //  |         |     |     |     |     |       |   /         |  7         |   8  |  9   |    (     |  )  | 
-        //  |         |     |     |     |     |       |   *         |  4         |   5  |  6   |    +     |  ^  |
-        //  |         |     |     |     |     |       |   0         |  1         |   2  |  3   |    -     |  :  |
-        //  |ALTGR/SLASH|SUPER/SLASH|SPC              | LSHFT/ENTER |  LALT/DOT  |COMMA |
+        //  +---------+---------+---------+-------------+-----------+-----+       +-------------+------+------+------+---------+-----+
+        //  |         |         |   %     |     [       |  ]        |  %  |       |   /         |  7         |   8  |  9   |    (     |  )  | 
+        //  |         |   #     |  ESC    |     _       |  $        |  *  |       |   *         |  4         |   5  |  6   |    +     |  ^  |
+        //  |         |         |   =     |     (       |  )        |  ,  |       |   0         |  1         |   2  |  3   |    -     |  :  |
+        //                                |             |           |     |       | LSHFT/ENTER |  LALT/DOT  |COMMA |
         extra_layer_4 {
             display-name = "NUMBER";
             bindings = <
-                &none &none &none &none &none &none   &kp LS(N7)    &kp N7       &kp N8 &kp N9 &kp LS(N8) &kp LS(N9) 
-                &none &none &none &none &none &none   &kp LS(RBKT)  &kp N4       &kp N5 &kp N6 &kp RBKT  &kp GRAVE 
-                &none &none &none &none &none &none   &kp N0        &kp N1       &kp N2 &kp N3 &kp FSLH   &kp LS(DOT)
-                                  &none &none &none   &mt LSHFT RET &mt LALT DOT &kp COMMA
+                &none &none     &kp PRCNT &kp RA(N8)    &kp RA(N9)  &kp PRCNT         &kp LS(N7)    &kp N7       &kp N8 &kp N9 &kp LS(N8) &kp LS(N9) 
+                &none &kp BSLH  &kp ESC   &kp RA(FSLH)  &kp DLLR    &kp LS(RBKT)      &kp LS(RBKT)  &kp N4       &kp N5 &kp N6 &kp RBKT  &kp GRAVE 
+                &none &none     &kp RPAR  &kp RA(N7)    &kp LPAR    &kp COMMA         &kp N0        &kp N1       &kp N2 &kp N3 &kp FSLH   &kp LS(DOT)
+                                          &none         &none       &none             &mt LSHFT RET &mt LALT DOT &kp COMMA
             >;
         };
 
