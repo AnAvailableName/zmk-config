@@ -116,13 +116,13 @@
             //    -- (https://sunaku.github.io/moergo-glove80-keyboard.html#symbol-layer)
             //
             //  +---------------+---------------+-----------+-------------+-------------+---------+       +-------------+-----------+-----------+---------------+-------------+---------+
-            //  |      €        |       ` `     |      <    |     >       |     _       |    |    |       |      ^      |     }     |    {      |     $         |     ?       |    §    |
+            //  |      €        |       `       |      <    |     >       |     _       |    |    |       |      ^      |     }     |    {      |     $         |     ?       |    §    |
             //  |      “        |      !        |     *     |     /       |     =       |    &    |       |      #      |     )     |    (      |     ;         |     "       |    “    |
             //  |      …        |      ~        |     +     |     [       |     ]       |    %    |       |      @      |     :     |    ,      |     .         |     ;       |         |
             //                                              |             |             |         |       |    LMETA    |   LALT    |  RALT     |
 
             bindings = <
-                &kp RA(E)       &kp PLUS  &kp NUBS    &kp LS(NUBS)  &kp RA(FSLH)  &kp RA(NUBS)      &kp GRAVE     &kp RA(N0)  &kp RA(N7)  &kp DLLR        &kp UNDER     &kp HASH 
+                &kp RA(E)       &kp PLUS        &kp NUBS    &kp LS(NUBS)  &kp LS(FSLH)  &kp RA(NUBS)      &kp GRAVE     &kp RA(N0)  &kp RA(N7)  &kp DLLR        &kp UNDER     &kp HASH 
                 &kp RA(V)       &kp EXCL        &kp RBRC    &kp AMPS      &kp RPAR      &kp CARET         &kp BSLH      &kp LPAR    &kp ASTRK   &kp LS(COMMA)   &kp AT        &kp RA(B)
                 &kp RA(DOT)     &kp RA(RBKT)    &kp RBKT    &kp RA(N8)    &kp RA(N9)    &kp PRCNT         &kp DLLR      &kp LS(DOT) &trans      &trans          &kp LS(BSLH)  &none
                                                             &none         &none         &none             &kp LSHIFT     &kp LCTRL   &kp RALT
@@ -168,7 +168,7 @@
             display-name = "NUMBER";
             bindings = <
                 &none &none     &kp PRCNT &kp RA(N8)    &kp RA(N9)  &kp PRCNT         &kp LS(N7)    &kp N7       &kp N8 &kp N9 &kp LS(N8) &kp LS(N9) 
-                &none &kp BSLH  &kp ESC   &kp RA(FSLH)  &kp DLLR    &kp LS(RBKT)      &kp LS(RBKT)  &kp N4       &kp N5 &kp N6 &kp RBKT  &kp GRAVE 
+                &none &kp BSLH  &kp ESC   &kp LS(FSLH)  &kp DLLR    &kp LS(RBKT)      &kp LS(RBKT)  &kp N4       &kp N5 &kp N6 &kp RBKT  &kp GRAVE 
                 &none &none     &kp RPAR  &kp RA(N7)    &kp LPAR    &kp COMMA         &kp N0        &kp N1       &kp N2 &kp N3 &kp FSLH   &kp LS(DOT)
                                           &none         &none       &none             &mt LSHFT RET &mt LALT DOT &kp COMMA
             >;
