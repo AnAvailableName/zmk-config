@@ -88,7 +88,7 @@
             // | AltGr/Slash    |Super/Slash | SPC                                                  | SYMBOL/ENTER | ALT | AltGr/Backslash  |
             bindings = <
               &lt META TAB        &kp Q       &kp W       &kp E       &kp R         &kp T           &kp Y      &kp U      &kp I       &kp O       &kp P           &lt META LBKT
-              &lt F_KEYS ESC      &mt LSHFT A &mt LCTRL S &mt LMETA D &mt LALT F    &kp G           &kp H      &mt LALT J &mt LMETA K &mt LCTRL L &mt LSHFT SEMI  &lt F_KEYS SQT
+              &lt F_KEYS ESC      &mt LCTRL A &mt LSHFT S &mt LMETA D &mt LALT F    &kp G           &kp H      &mt LALT J &mt LMETA K &mt LSHFT L &mt LCTRL SEMI  &lt F_KEYS SQT
               &td_shift_caps_word &kp Z       &kp X       &kp C       &lt MOUSE V   &kp B           &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &td_shift_caps_word
                                               &mt RALT LS(N7) &lt NUMBER TAB &lt SYMBOL SPACE       &lt NAV RET &mt LALT BACKSPACE &mt RALT RA(MINUS)
             >;
@@ -142,10 +142,10 @@
         mouse_layer {
             display-name = "MOUSE";
             bindings = <
-                &none         &none      &none     &none     &none          &none     &mkp MB4       &msc SCRL_DOWN &msc SCRL_UP &mkp MB5        &none  &none
-                &td_ctrl_meta &kp LSHIFT &kp LCTRL &none     &msc SCRL_DOWN &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_DOWN &msc SCRL_UP
-                &kp LSHIFT    &none      &none     &none     &msc SCRL_UP   &none     &mkp MCLK      &mkp LCLK      &mkp RCLK    &none           &none  &kp LSHIFT
-                                                   &mkp MCLK &mkp LCLK &mkp RCLK      &kp LMETA      &kp LALT       &none       
+                &none         &none      &none      &none     &none          &none     &mkp MB4       &msc SCRL_DOWN &msc SCRL_UP &mkp MB5        &none  &none
+                &td_ctrl_meta &kp LCTRL  &kp LSHIFT &none     &msc SCRL_DOWN &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_DOWN &msc SCRL_UP
+                &kp LSHIFT    &none      &none      &none     &msc SCRL_UP   &none     &mkp MCLK      &mkp LCLK      &mkp RCLK    &none           &none  &kp LSHIFT
+                                                    &mkp MCLK &mkp LCLK &mkp RCLK      &kp LMETA      &kp LALT       &none       
             >;
         };
 
