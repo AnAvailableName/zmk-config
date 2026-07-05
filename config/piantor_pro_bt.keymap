@@ -170,7 +170,7 @@
                 &none &none     &kp PRCNT &kp RA(N8)    &kp RA(N9)  &kp PRCNT         &kp LS(N7)    &kp N7       &kp N8 &kp N9 &kp LS(N8) &kp LS(N9) 
                 &none &kp BSLH  &kp ESC   &kp LS(FSLH)  &kp DLLR    &kp LS(RBKT)      &kp LS(RBKT)  &kp N4       &kp N5 &kp N6 &kp RBKT  &kp GRAVE 
                 &none &none     &kp RPAR  &kp RA(N7)    &kp LPAR    &kp COMMA         &kp N0        &kp N1       &kp N2 &kp N3 &kp FSLH   &kp LS(DOT)
-                                          &none         &none       &none             &mt LSHFT RET &mt LALT DOT &kp COMMA
+                                          &none         &none       &none             &mt N0 &mt LALT DOT &kp COMMA
             >;
         };
 
