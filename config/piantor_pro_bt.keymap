@@ -18,6 +18,7 @@
 #define MOUSE   4
 #define F_KEYS  5
 #define NUMBER  6
+#define OPS     7
 
 // mouse settings
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 900  // default: 600
@@ -122,7 +123,7 @@
             //                                              |             |             |         |       |    LSHIFT    |   LCTRL    |  RALT     |
 
             bindings = <
-                &kp RA(E)       &kp RA(E)       &kp UNDER   &kp NUBS     $&kp LS(NUBS)  &kp RA(NUBS)      &kp GRAVE     &kp RA(N7)  &kp RA(N0)  &kp DLLR        &kp PLUS      &kp HASH
+                &kp RA(E)       &kp RA(E)       &kp UNDER   &kp NUBS      &kp LS(NUBS)  &kp RA(NUBS)      &kp GRAVE     &kp RA(N7)  &kp RA(N0)  &kp DLLR        &kp PLUS      &kp HASH
                 &kp RA(V)       &kp EXCL        &kp RBRC    &kp AMPS      &kp RPAR      &kp CARET         &kp BSLH      &kp ASTRK   &kp LPAR    &kp LS(COMMA)   &kp AT        &kp RA(B)
                 &kp RA(DOT)     &kp RA(RBKT)    &kp RBKT    &kp RA(N8)    &kp RA(N9)    &kp PRCNT         &kp RS(Q)     &kp LS(DOT) &trans      &trans          &kp LS(BSLH)  &none
                                                             &none         &none         &none             &kp LSHIFT    &kp LCTRL   &kp RALT
@@ -162,25 +163,30 @@
         //  +---------+---------+---------+-------------+-----------+-----+       +-------------+------+------+------+---------+-----+
         //  |         |         |   %     |     [       |  ]        |  %  |       |   /         |  7         |   8  |  9   |    (     |  )  | 
         //  |         |   #     |  ESC    |     _       |  $        |  *  |       |   *         |  4         |   5  |  6   |    +     |  ^  |
-        //  |         |         |   =     |     (       |  )        |  ,  |       |   0         |  1         |   2  |  3   |    -     |  :  |
-        //                                |             |           |     |       | LSHFT/ENTER |  LALT/DOT  |COMMA |
+        //  |         |         |   =     |     (       |  )        |  ,  |       |   +         |  1         |   2  |  3   |    -     |  :  |
+        //                                |             |           |     |       | LSHFT/0     |  LALT/DOT  |COMMA |
         extra_layer_4 {
             display-name = "NUMBER";
             bindings = <
                 &none &none     &kp PRCNT &kp RA(N8)    &kp RA(N9)  &kp PRCNT         &kp LS(N7)    &kp N7       &kp N8 &kp N9 &kp LS(N8) &kp LS(N9) 
-                &none &kp BSLH  &kp ESC   &kp LS(FSLH)  &kp DLLR    &kp LS(RBKT)      &kp LS(RBKT)  &kp N4       &kp N5 &kp N6 &kp RBKT  &kp GRAVE 
-                &none &none     &kp RPAR  &kp RA(N7)    &kp LPAR    &kp COMMA         &kp N0        &kp N1       &kp N2 &kp N3 &kp FSLH   &kp LS(DOT)
-                                          &none         &none       &none             &mt N0 &mt LALT DOT &kp COMMA
+                &none &kp BSLH  &kp ESC   &kp LS(FSLH)  &kp DLLR    &kp LS(RBKT)      &kp LS(RBKT)  &kp N4       &kp N5 &kp N6 &kp RBKT   &kp GRAVE 
+                &none &none     &kp RPAR  &kp RA(N7)    &kp LPAR    &kp COMMA         &kp RBKT      &kp N1       &kp N2 &kp N3 &kp FSLH   &kp LS(DOT)
+                                          &none         &none       &none             &lt OPS N0    &mt LALT DOT &kp COMMA
             >;
         };
 
+        //      +-------+---------+-------+-------+-------+-----+                   +-------------+-------------+---------+-------------+---------+------+
+        //      |       |         |       |   {   |   }   |     |                   |             |   /         |   %     |   ~         |         |     |
+        //      |       |   <     |   >   |   (   |   )   |     |                   |   |         |   *         |   +     |   -         |   !     |     |
+        //      |       |         |       |   [   |   ]   |     |                   |   :         |   =         |   ^     |   _         |         |     |
+        //                              |   <   |   >   |SPACE|                     |             |             |         |
         extra_layer_5 {
-            display-name = "EXTRA 5";
+            display-name = "OPS";
             bindings = <
-                &none &none &none &none &none &none  &none &none &none &none &none &none
-                &none &none &none &none &none &none  &none &none &none &none &none &none
-                &none &none &none &none &none &none  &none &none &none &none &none &none
-                                     &none &none &none  &none &none &none       
+                &none   &none     &none         &kp RA(N7)  &kp RA(N0)  &none       &none         &kp LS(N7)    &kp PRCNT &kp RA(RBKT)  &none     &none
+                &none   &kp NUBS  &kp LS(NUBS)  &kp RA(N7)  &kp LPAR    &none       &kp RA(NUBS)  &kp LS(RBKT)  &kp RBKT  &kp FSLH      &kp EXCL  &none
+                &none   &none     &none         &kp RA(N8)  &kp RA(N9)  &none       &kp LS(DOT)   &kp RPAR      &kp GRAVE &kp LS(FSLH)  &none     &none
+                                                &kp NUBS    &kp LS(NUBS) &kp SPACE  &none         &none         &none
             >;
         };
 
