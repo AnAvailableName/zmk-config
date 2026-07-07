@@ -170,7 +170,7 @@
             bindings = <
                 &none &none     &kp PRCNT &kp RA(N8)    &kp RA(N9)  &kp PRCNT         &kp LS(N7)    &kp N7       &kp N8 &kp N9 &kp LS(N8) &kp LS(N9) 
                 &none &kp BSLH  &kp ESC   &kp LS(FSLH)  &kp DLLR    &kp LS(RBKT)      &kp LS(RBKT)  &kp N4       &kp N5 &kp N6 &kp RBKT   &kp GRAVE 
-                &none &none     &kp RPAR  &kp RA(N7)    &kp LPAR    &kp COMMA         &kp RBKT      &kp N1       &kp N2 &kp N3 &kp FSLH   &kp LS(DOT)
+                &none &none     &kp RPAR  &kp ASTRK     &kp LPAR    &kp COMMA         &kp RBKT      &kp N1       &kp N2 &kp N3 &kp FSLH   &kp LS(DOT)
                                           &none         &none       &none             &lt OPS N0    &mt LALT DOT &kp COMMA
             >;
         };
@@ -184,7 +184,7 @@
             display-name = "OPS";
             bindings = <
                 &none   &none     &none         &kp RA(N7)  &kp RA(N0)  &none       &none         &kp LS(N7)    &kp PRCNT &kp RA(RBKT)  &none     &none
-                &none   &kp NUBS  &kp LS(NUBS)  &kp RA(N7)  &kp LPAR    &none       &kp RA(NUBS)  &kp LS(RBKT)  &kp RBKT  &kp FSLH      &kp EXCL  &none
+                &none   &kp NUBS  &kp LS(NUBS)  &kp ASTRK   &kp LPAR    &none       &kp RA(NUBS)  &kp LS(RBKT)  &kp RBKT  &kp FSLH      &kp EXCL  &none
                 &none   &none     &none         &kp RA(N8)  &kp RA(N9)  &none       &kp LS(DOT)   &kp RPAR      &kp GRAVE &kp LS(FSLH)  &none     &none
                                                 &kp NUBS    &kp LS(NUBS) &kp SPACE  &none         &none         &none
             >;
