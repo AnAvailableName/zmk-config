@@ -116,17 +116,17 @@
             //    -- https://getreuer.info/posts/keyboards/symbol-layer/index.html
             //    -- (https://sunaku.github.io/moergo-glove80-keyboard.html#symbol-layer)
             //
-            //  +---------------+---------------+-----------+-------------+-------------+---------+       +-------------+-----------+-----------+---------------+-------------+---------+
-            //  |      €        |      ß        |     ?     |      <      |     >       |    |    |       |      ^      |     {     |    }      |     $         |     `       |    §    |
-            //  |      “        |      !        |     *     |     /       |     =       |    &    |       |      #      |     (     |    )      |     ;         |     "       |    “    |
-            //  |      …        |      ~        |     +     |     [       |     ]       |    %    |       |      @      |     :     |    ,      |     .         |     '       |         |
-            //                                              |             |             |         |       |    LSHIFT    |   LCTRL    |  RALT     |
+            //  +-----------+---------------+---------------+-------------+-------------+---------+       +-----------+-----------+-----------+-------------------+-------------+---------+
+            //  |      €    |      ß        |     ?         |      <      |     >       |    |    |       |      ^    |     {     |    }      |     $             |     `       |    §    |
+            //  |      “    |      !        |     *         |     /       |     =       |    &    |       |      #    |     (     |    )      |     ;             |     "       |    “    |
+            //  |      …    |      ~        |     +         |     [       |     ]       |    %    |       |      @    |     :     |    ,      |     .             |     '       |         |
+            //                                              |             |             |         |       |    LSHIFT |   LCTRL   |  RALT     |
 
             bindings = <
-                &kp RA(E)       &kp MINUS       &kp UNDER   &kp NUBS      &kp LS(NUBS)  &kp RA(NUBS)      &kp GRAVE     &kp RA(N7)  &kp RA(N0)  &kp DLLR        &kp PLUS      &kp HASH
-                &kp RA(V)       &kp EXCL        &kp RBRC    &kp AMPS      &kp RPAR      &kp CARET         &kp BSLH      &kp ASTRK   &kp LPAR    &kp LS(COMMA)   &kp AT        &kp RA(B)
-                &kp RA(DOT)     &kp RA(RBKT)    &kp RBKT    &kp RA(N8)    &kp RA(N9)    &kp PRCNT         &kp RS(Q)     &kp LS(DOT) &trans      &trans          &kp LS(BSLH)  &none
-                                                            &none         &none         &none             &kp LSHIFT    &kp LCTRL   &kp RALT
+                &kp RA(E)   &kp MINUS       &kp UNDER       &kp NUBS      &kp LS(NUBS)  &kp RA(NUBS)      &kp GRAVE   &kp RA(N7)  &kp RA(N0)  &kp DLLR            &kp PLUS      &kp HASH
+                &kp RA(V)   &mt LSHFT EXCL  &mt LCTRL RBRC  &kp AMPS      &kp RPAR      &kp CARET         &kp BSLH    &kp ASTRK   &kp LPAR    &mt LCTRL LS(COMMA) &mt LSHFT AT  &kp RA(B)
+                &kp RA(DOT) &kp RA(RBKT)    &kp RBKT        &kp RA(N8)    &kp RA(N9)    &kp PRCNT         &kp RQ(Q)   &kp LS(DOT) &trans      &trans              &kp LS(BSLH)  &none
+                                                            &none         &none         &none             &kp LSHIFT  &kp LCTRL   &kp RALT
             >;
         };
 
